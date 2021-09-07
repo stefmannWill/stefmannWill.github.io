@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hausartzpraxis Willmann</title>
+		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
+	</head>
+
+	<body >
+
+		<div id="weiterenummern">
+			<div id="ausnr">
+				<ul>
+					<li>Polizei<span>110</span></li>
+					<li>Feuerwehr<span>112</span></li>
+					<li>Rettungsdienst<span>112</span></li>
+					<li>Giftnotruf<span>0761-1920</span></li>
+					<li>BWK<span>0731-1400140</span></li>
+				</ul>
+				<button id="schließen" onclick="aus()">Schließen</button>
+			</div>
+		</div>
+
+		<header id="header">
+				<div class="flexbox" >
+						<div class="flexelement" id="logo">
+							<a href="index.html">
+							<img src="src/img/logo2.1.png" alt="Logo">
+							</a>
+						</div>
+						<div class="flexelement" onclick="nr()" id="notfallnr">
+								<span>Notfallnummern</span>
+								</div >
+						</div>
+		</header>
+	<!-- Navigation -->
+
+			 <section id="header-nav">
+				 <div class="flexbox" >
+						 <div class="flexelement">
+								 <a href="index.html"class="punkte">Startseite</a>
+								 <a href="Termin.html"class="punkte">Terminvereinbarung</a>
+								 <a href="Leistungen.html" class="punkte">Leistungen</a>
+								 <a href="Kontakt.html"class="punkte active">Kontakt</a>
+								 <a href="Gesundheitsquiz.html"class="punkte">Gesundheitsquiz</a>
+								 <a href="Impressum.html"class="punkte">Impressum</a>
+						 </div>
+				</div>
+			</section>
+
+			<section id="header-navKlein">
+				<div class="flexbox" >
+						<div class="flexelement">
+							<a href="index.html"class="punkte">Startseite</a>
+							<a href="Termin.html"class="punkte">Terminvereinbarung</a>
+							<a href="Leistungen.html" class="punkte">Leistungen</a>
+						</div>
+						<div class="flexelement">
+							<a href="Kontakt.html"class="punkte active">Kontakt</a>
+								<a href="Gesundheitsquiz.html"class="punkte">Gesundheitsquiz</a>
+								<a href="Impressum.html"class="punkte">Impressum</a>
+						</div>
+			 </div>
+		 </section>
+		 <section id="header-navMobil">
+			 <div class="flexbox" >
+					 <div class="flexelement">
+							 <a href="index.html"class="punkteMobil"><span>Startseite</span></a>
+							 <a href="Termin.html"class="punkteMobil"><span>Terminvereinbarung</span></a>
+							 <a href="Leistungen.html" class="punkteMobil"><span>Leistungen</span></a>
+							 <a href="Kontakt.html"class="punkteMobil   activeMobil"><span>Kontakt</span></a>
+							 <a href="Gesundheitsquiz.html"class="punkteMobil"><span>Gesundheitsquiz</span></a>
+							 <a href="Impressum.html"class="punkteMobil"><span>Impressum</span></a>
+					 </div>
+			</div>
+		</section>
+
+<!-- Kontakt -->
+		<section id="kontakt">
+			<div class="flexbox">
+				<div class="flexelement">
+					<iframe id="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2649.5029176646894!2d9.971044115612548!3d48.38928437924431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47996421a84f3961%3A0xed03bddec030527!2zUsO2bWVyc3RyYcOfZSA3MywgODkwNzcgVWxt!5e0!3m2!1sde!2sde!4v1631016403595!5m2!1sde!2sde"  allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<div class="flexelement">
+					<h1>Kontaktdaten</h1>
+					<ul>
+						<li><span>Hausarztpraxis Willmann</span></li>
+						<li><span>Römerstraße 73</span></li>
+						<li><span>89077  Ulm</span></li>
+						<li><span>Telefon:  01726841964</span></li>
+						<li><span>E-Mail:  stefan-willmann95@web.de</span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="zeiten">
+				<h1>Öffnungszeiten</h1>
+				<table id="table">
+					<tr>
+						<td>Montag - Freitag</td>
+						<td>07:30 Uhr - 12:00Uhr </td>
+					</tr>
+					<tr>
+						<td>Montag, Dientag, Donnerstag und Freitag</td>
+						<td>15:00 Uhr - 18:00 Uhr</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+
+
+			 <script src="./src/js/classes/Wichtigenr.js"defer></script>
+			 <script src="./src/js/main.js" defer ></script>
+
+  </body>
+</html>

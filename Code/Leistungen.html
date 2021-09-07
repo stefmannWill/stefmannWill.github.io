@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hausartzpraxis Willmann</title>
+		<link rel="stylesheet" type="text/css" href="src/css/styles.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
+	</head>
+	<body >
+		<div id="weiterenummern">
+			<div id="ausnr">
+				<ul>
+					<li>Polizei<span>110</span></li>
+					<li>Feuerwehr<span>112</span></li>
+					<li>Rettungsdienst<span>112</span></li>
+					<li>Giftnotruf<span>0761-1920</span></li>
+					<li>BWK<span>0731-1400140</span></li>
+				</ul>
+				<button id="schließen" onclick="aus()">Schließen</button>
+			</div>
+		</div>
+		  <header id="header">
+		      <div class="flexbox" >
+		          <div class="flexelement" id="logo">
+								<a href="index.html">
+								<img src="src/img/logo2.1.png" alt="Logo">
+								</a>
+		          </div>
+							<div class="flexelement" onclick="nr()" id="notfallnr">
+									<span>Notfallnummern</span>
+									</div >
+							</div>
+		  </header>
+
+		<!-- Navigation -->
+
+			 <section id="header-nav">
+				 <div class="flexbox" >
+						 <div class="flexelement">
+						  	 <a href="index.html"class="punkte">Startseite</a>
+								 <a href="Termin.html"class="punkte">Termin Vereinbarung</a>
+								 <a href="Leistungen.html" class="punkte active">Leistungen</a>
+								 <a href="Kontakt.html"class="punkte">Kontakt</a>
+								 <a href="Gesundheitsquiz.html"class="punkte">Gesundheitsquiz</a>
+								 <a href="Impressum.html"class="punkte">Impressum</a>
+						 </div>
+				</div>
+			</section>
+
+			<section id="header-navKlein">
+				<div class="flexbox" >
+						<div class="flexelement">
+								<a href="index.html"class="punkte">Startseite</a>
+								<a href="Termin.html"class="punkte">Termin Vereinbarung</a>
+								<a href="Leistungen.html" class="punkte active">Leistungen</a>
+						</div>
+						<div class="flexelement">
+							<a href="Kontakt.html"class="punkte">Kontakt</a>
+								<a href="Gesundheitsquiz.html"class="punkte">Gesundheitsquiz</a>
+								<a href="Impressum.html"class="punkte">Impressum</a>
+						</div>
+			 </div>
+		 </section>
+
+		 <section id="header-navMobil">
+			 <div class="flexbox" >
+					 <div class="flexelement">
+							 <a href="index.html"class="punkteMobil"><span>Startseite</span></a>
+							 <a href="Termin.html"class="punkteMobil"><span>Termin Vereinbarung</span></a>
+							 <a href="Leistungen.html" class="punkteMobil activeMobil"><span>Leistungen</span></a>
+						   <a href="Kontakt.html"class="punkteMobil"><span>Kontakt</span></a>
+							 <a href="Gesundheitsquiz.html"class="punkteMobil"><span>Gesundheitsquiz</span></a>
+							 <a href="Impressum.html"class="punkteMobil"><span>Impressum</span></a>
+					 </div>
+			</div>
+		</section>
+
+		<section id="leistungen">
+			<h1>Leistungen</h1>
+				<div class="flexbox">
+					<div class="flexelement">
+							<div onclick="kasseClick()" id="kassenleistungen">
+							 	<span class="leistung">Kassenleistungen</span>
+							</div>
+					</div>
+					<div class="flexelement">
+							<div onclick="selbstClick()" id="selbstzahlerleistungen">
+							 	<span class="leistung">Selbstzahlerleistung</span>
+							</div>
+					</div>
+				</div>
+			<article class="text">
+				<span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+			</article>
+		</section>
+
+		<section id="leistungen2">
+			<div class="flexbox">
+				 <div class="flexelement" id="kasseaus">
+					 <h1>Kassenleistungen</h1>
+					 <ul>
+						 <li><span>Behandlung 1</span></li>
+						 <li><span>Behandlung 2</span></li>
+						 <li><span>Behandlung 3</span></li>
+						 <li><span>Behandlung 4</span></li>
+						 <li><span>Behandlung 5</span></li>
+					 </ul>
+
+				</div>
+				<div class="flexelement" id="selbstaus">
+					<h1>Selbstzahlerleistungen</h1>
+					<ul>
+						<li><span>Behandlung 1</span></li>
+						<li><span>Behandlung 2</span></li>
+						<li><span>Behandlung 3</span></li>
+						<li><span>Behandlung 4</span></li>
+						<li><span>Behandlung 5</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+
+	<script src="./src/js/Leistungen.js"defer></script>
+
+
+</body>
+</html>
