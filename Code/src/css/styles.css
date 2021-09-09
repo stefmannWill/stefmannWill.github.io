@@ -337,18 +337,52 @@ background-color: #e0deda;
 #sprechstunde >.flexbox .flexelement:last-of-type {flex-basis: 30%;}
 
 #sprechstunde #bild1{
-  animation: anni1;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  -webkit-animation: anni1;
+          animation: anni1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #sprechstunde #bild2{
-  animation: anni2;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  -webkit-animation: anni2;
+          animation: anni2;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 
+}
+
+@-webkit-keyframes anni1 {
+  0% {
+    background: url("../img/vs2.1.png") no-repeat;
+    height: 0;
+    width: 100%;
+    padding-top:55.3%;
+    background-size: contain;
+  }
+
+  30% {
+    background: url("../img/vs3.1.png") no-repeat ;
+    height: 0;
+    width: 100%;
+    padding-top:55.3%;
+    background-size: contain;
+  }
+
+  100%{
+    background: url("../img/vs3.1.png")no-repeat;
+    height: 0;
+    width: 100%;
+    padding-top:55.3%;
+    background-size: contain;
+  }
 }
 
 @keyframes anni1 {
@@ -370,6 +404,32 @@ background-color: #e0deda;
 
   100%{
     background: url("../img/vs3.1.png")no-repeat;
+    height: 0;
+    width: 100%;
+    padding-top:55.3%;
+    background-size: contain;
+  }
+}
+
+@-webkit-keyframes anni2 {
+  0% {
+    background: url("../img/vs3.1.png")no-repeat ;
+    height: 0;
+    width: 100%;
+    padding-top:55.3%;
+    background-size: contain;
+  }
+
+  30% {
+    background: url("../img/vs2.1.png")no-repeat ;
+    height: 0;
+    width: 100%;
+    padding-top:55.3%;
+    background-size: contain;
+  }
+
+  100%{
+    background: url("../img/vs2.1.png")no-repeat;
     height: 0;
     width: 100%;
     padding-top:55.3%;
@@ -448,7 +508,8 @@ border: 3px solid rgba(245, 238, 237,0.7);
 
 #sprechstunde ul {
   list-style-type: square;
-  margin-inline-start:1rem;
+  -webkit-margin-start:1rem;
+          margin-inline-start:1rem;
 }
 
 #sprechstunde .info li{
@@ -479,7 +540,8 @@ border: 3px solid rgba(245, 238, 237,0.7);
 @media (max-width:1580px) {
   #sprechstunde ul {
     list-style-type: square;
-    margin-inline-start:0;}
+    -webkit-margin-start:0;
+            margin-inline-start:0;}
   #sprechstunde .info li{
     padding-bottom:  2.0rem;}
   #sprechstunde .info li span {
@@ -635,7 +697,8 @@ border: 3px solid rgba(245, 238, 237,0.7);
 #corona ul{
   padding-top: 2rem;
   list-style-type: none;
-  padding-inline-start:0;
+  -webkit-padding-start:0;
+          padding-inline-start:0;
 }
 
 #corona ul li{
@@ -805,12 +868,12 @@ width: 300px;
 /* wunschtermin */
 
 
-#terminImpfung{
+#termin{
   margin-top: 50px;
 }
 
 
-#terminImpfung h1{
+#termin h1{
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -818,29 +881,23 @@ width: 300px;
   border: 3px solid rgba(216,171,107,0.9);
   padding: 1rem;
 }
-#terminImpfung .flexcont{
+#termin .flexcont{
   display: flex;
   /* flex-direction: column; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  justify-content: center;
 }
-#terminImpfung .flexcont .flexbox{
+#termin .flexcont .flexbox{
   padding: 0 2rem;
 }
-#terminImpfung .flexcont .flexbox:nth-of-type(1){
-  flex-basis: 25%;
-}
-#terminImpfung .flexcont .flexbox:nth-of-type(2){
-  flex-basis: 50%;
-}
-#terminImpfung .flexcont .flexbox:nth-of-type(3){
-  flex-basis: 25%;
+
+#formular{
+    flex-basis: 50%;
 }
 
-
-
-#formular_impfung{
+#formular_impfung, #formular_sprechstunde{
   margin-left: auto;
   margin-right: auto;
   padding: 1.5rem;
@@ -850,26 +907,28 @@ width: 300px;
 }
 
 
-#formular_impfung .flexelement input{
+#formular_impfung .flexelement input,#formular_sprechstunde .flexelement input{
   margin: 0.5rem 0.5rem 0.5rem 0;
   font-family: 'Lato','Raleway','Helvetica Neue','Arial',sans-serif;
 }
 
-#formular_impfung .flexelement p{
+#formular_impfung .flexelement p, #formular_sprechstunde .flexelement p{
   font-weight: bold;
   margin: 0;
 }
 
-#formular_impfung, #nachricht{
+#formular_impfung, #formular_sprechstunde, #nachricht{
   padding-bottom: 4rem;
   font-family: 'Lato','Raleway','Helvetica Neue','Arial',sans-serif;
+}
+#anzeige{
+    flex-basis: 50%;
+    margin-left: 20%;
 }
 .meldung{
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  /* height:400px; */
-  width:350px;
   background-color: rgba(245, 238, 237,0.9);
   border: 2px solid rgba(189,193,160,0.6);
   overflow: hidden;
@@ -878,10 +937,20 @@ width: 300px;
   overflow: hidden;
 }
 
-/*----------------------------------------------------- Terminbestätgung---------------------- */
+@media (max-width:1280px) {
+  #termin h1{
+    width: 70%;
+  }
+}
 
-
-
+@media (max-width:1024px) {
+  #termin h1{width: 95%;}
+  #anzeige{margin-left:0;}
+  #formular{margin-right: 0 !important;}
+  #termin .flexcont .flexbox{
+    padding: 0 0.5rem;
+  }
+}
 /* ---------------------------------------------------------Leistungen------------------------------------------------------- */
 
 #leistungen{
@@ -1011,11 +1080,35 @@ width: 300px;
 }
 
  #selbstein li,#kasseein li{
-   animation: anni3;
-   animation-duration: 2.5s;
-   animation-delay: 0.5s;
-   animation-iteration-count: 1;
-   animation-fill-mode: forwards;
+   -webkit-animation: anni3;
+           animation: anni3;
+   -webkit-animation-duration: 2.5s;
+           animation-duration: 2.5s;
+   -webkit-animation-delay: 0.5s;
+           animation-delay: 0.5s;
+   -webkit-animation-iteration-count: 1;
+           animation-iteration-count: 1;
+   -webkit-animation-fill-mode: forwards;
+           animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes anni3 {
+  0% {
+color: rgba(0, 0, 0, 0);}
+  20% {
+color: rgba(0, 0, 0, .2);}
+  40% {color: rgba(0, 0, 0, .4);
+  }
+  60% {
+color: rgba(0, 0, 0, .6);
+  }
+  80% {
+color: rgba(0, 0, 0, .8);
+  }
+
+  100%{
+color: rgba(0, 0, 0, 1);
+  }
 }
 
 @keyframes anni3 {
@@ -1178,6 +1271,10 @@ background-image: linear-gradient(to right, rgba(0, 51, 102,0.3),rgba(245, 245, 
   padding-top: 1rem;
   border-bottom: 2px solid black;
 }
+#kontakt #zeiten table tr td:last-of-type{
+  text-align: right;
+}
+
 
 @media (max-width:1580px) {
   #kontakt{
@@ -1216,12 +1313,18 @@ background-image: linear-gradient(to right, rgba(0, 51, 102,0.3),rgba(245, 245, 
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  height: 50px;
+  height: 100px;
   width: 100px;
+
 }
 #quizstart div button{
   cursor:pointer;
+  background-color: rgba(216,171,107,0.75);
+  padding: 1.5rem 0.5rem;
+  width: 150px;
+  border: 2px solid black;
 }
+
 #fragenNr{
   margin-left: 25%;
   margin-right: auto;
@@ -1260,10 +1363,31 @@ background:url("../img/daumen.png") top no-repeat ;
 }
 .drehengut{
   transform: rotateY(90deg);
-  animation: gut linear;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  -webkit-animation: gut linear;
+          animation: gut linear;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes gut {
+  7% {transform: rotateY(75deg);}
+  14%{transform: rotateY(60deg);}
+  21%{transform: rotateY(45deg);}
+  28%{transform: rotateY(30deg);}
+  35%{transform: rotateY(15deg);}
+  42%{transform: rotateY(0deg);
+      transform: rotate(44deg);}
+  49%{transform: rotate(88deg);}
+  56%{transform: rotate(112deg);}
+  63%{transform: rotate(156deg);}
+  70%{transform: rotate(200deg);}
+  77%{transform: rotate(244deg);}
+  84%{transform: rotate(288deg);}
+  91%{transform: rotate(324deg);}
+  100%{transform: rotate(360deg);}
 }
 @keyframes gut {
   7% {transform: rotateY(75deg);}
@@ -1285,10 +1409,31 @@ background:url("../img/daumen.png") top no-repeat ;
 
 .drehenmittel{
   transform: rotateY(90deg);
-  animation: mittel linear;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  -webkit-animation: mittel linear;
+          animation: mittel linear;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes mittel {
+  7% {transform: rotateY(75deg);}
+  14%{transform: rotateY(60deg);}
+  21%{transform: rotateY(45deg);}
+  28%{transform: rotateY(30deg);}
+  35%{transform: rotateY(15deg);}
+  42%{transform: rotateY(0deg);
+      transform: rotate(50deg);}
+  49%{transform: rotate(100deg);}
+  56%{transform: rotate(150deg);}
+  63%{transform: rotate(200deg);}
+  70%{transform: rotate(250deg);}
+  77%{transform: rotate(300deg);}
+  84%{transform: rotate(350deg);}
+  91%{transform: rotate(400deg);}
+  100%{transform: rotate(450deg);}
 }
 @keyframes mittel {
   7% {transform: rotateY(75deg);}
@@ -1309,10 +1454,31 @@ background:url("../img/daumen.png") top no-repeat ;
 }
 .drehenschlecht{
   transform: rotateY(90deg);
-  animation: schlecht linear;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  -webkit-animation: schlecht linear;
+          animation: schlecht linear;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes schlecht {
+  7% {transform: rotateY(75deg);}
+  14%{transform: rotateY(60deg);}
+  21%{transform: rotateY(45deg);}
+  28%{transform: rotateY(30deg);}
+  35%{transform: rotateY(15deg);}
+  42%{transform: rotateY(0deg);
+      transform: rotate(60deg);}
+  49%{transform: rotate(120deg);}
+  56%{transform: rotate(180deg);}
+  63%{transform: rotate(240deg);}
+  70%{transform: rotate(300deg);}
+  77%{transform: rotate(360deg);}
+  84%{transform: rotate(420deg);}
+  91%{transform: rotate(480deg);}
+  100%{transform: rotate(540deg);}
 }
 @keyframes schlecht {
   7% {transform: rotateY(75deg);}
@@ -1416,10 +1582,8 @@ background:url("../img/daumen.png") top no-repeat ;
 }
 @media (max-width:1370px) {
   #quiz {
-    width: 90%;
-  }
+    width: 90%;}
 }
-
 
 @media (max-width:1040px) {
   #quiz {
@@ -1436,12 +1600,6 @@ background:url("../img/daumen.png") top no-repeat ;
   margin: 0.7rem 0.2rem;}
  }
 
-@media (max-width:600px) {
-
-}
-
-
-
 /* --------------------------------footer ---------------------------------------------*/
 #footer1{
   background-color: rgba(245, 238, 237,0.6);
@@ -1451,23 +1609,6 @@ background:url("../img/daumen.png") top no-repeat ;
   bottom: 0;
   margin-top: 50px;
 }
-#footer2{
-  background-color: rgba(245, 238, 237,0.6);
-  width:100%;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  margin-top: 50px;
-}
-#footer3{
-  background-color: rgba(245, 238, 237,0.6);
-  width:100%;
-  height: 100px;
-  position: relative;
-  bottom: 0;
-  margin-top: 50px;
-}
-
 
 footer #logoF{
   position:   absolute;

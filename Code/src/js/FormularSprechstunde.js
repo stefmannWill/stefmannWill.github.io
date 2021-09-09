@@ -7,7 +7,7 @@ const meldungAnzeigen = function(e){
   if (document.querySelector("#anzeige")!=null) {
     document.querySelector("#anzeige").remove();
   }
-  document.querySelector("#termin .flexcont").insertAdjacentHTML("afterbegin",htmlCode);
+  document.querySelector("#termin.flexcont").insertAdjacentHTML("afterbegin",htmlCode);
 }
 
 // Gibt eine fehlermeldung aus die Anezigt welche Felder nicht ausgefüllt wurden
@@ -31,13 +31,10 @@ const datenCheck =function(daten){
 }
 //Eingegebene Daten in einem Objekt hinterlegen
 const daten_ermitteln = function(e) {
-  let stoff;
-  if(e.target.elements.biotech.checked){
-    stoff="Biontech"
-  }else if(e.target.elements.moderna.checked){
-    stoff="Moderna"
-  }else{
-    stoff="Johnson & Johnson"}
+  let stoff="Videosprechstunde";
+  if(e.target.elements.vorort.checked){
+    stoff="Sprechstunde"
+  }
 
   return{
     Anrede:e.target.elements.anrede.value,
@@ -60,10 +57,10 @@ const daten_ermitteln = function(e) {
     }
 }
 
-
-let eintrag = document.querySelector("#formular_impfung");
+let eintrag = document.querySelector("#formular_sprechstunde");
 eintrag.addEventListener("submit",e=>{
   e.preventDefault();
+  console.log("KHBKJB")
   if (document.querySelector("#anzeige")!=null) {
     document.querySelector("#anzeige").remove();
   }
