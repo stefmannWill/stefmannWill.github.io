@@ -8,55 +8,82 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
 	</head>
 	<body >
-		<header id="header">
-	      <div class="flexbox" >
-	          <div class="flexelement" id="logo">
-							<a href="index.html">
-							<img src="src/img/logo2.1.png" alt="Logo">
-							</a>
-	          </div>
-	          <div class="flexelement" id="nr">
-							<!-- <div>IHRE GESUNDHEIT IST UNS WICHTIG</div> -->
-	          </div>
 
-						<div class="flexelement" onclick="nr()" id="notfallnr">
-								<span>Notfallnummern</span>
+		<!-- Oberer Banner -->
+
+				<header id="header">
+			      <div class="flexbox" >
+			          <div class="flexelement" id="logo">
+									<a href="index.html">
+									<img src="src/img/logo2.1.png" alt="Logo">
+									</a>
+			          </div>
+								<div class="flexelement" onclick="nr()" id="notfallnr">
+										<span >Notfallnummern</span>
+										<div id="wichtigenr">
+											<ul>
+												<li>Polizei<span>110</span></li>
+												<li>Feuerwehr<span>112</span></li>
+												<li>Rettungsdienst<span>112</span></li>
+												<li>Giftnotruf<span>0761-1920</span></li>
+												<li>BWK<span>0731-1400140</span></li>
+											</ul>
+										</div>
 								</div >
+							</div>
+			  </header>
+			<!-- Navigation -->
+
+					 <section id="header-nav">
+						 <div class="flexbox" >
+								 <div class="flexelement">
+								  	 <a href="index.html"class="punkte">Startseite</a>
+										 <a href="Termin.html"class="punkte  active">Terminvereinbarung</a>
+										 <a href="Leistungen.html" class="punkte">Leistungen</a>
+										 <a href="Kontakt.html"class="punkte">Kontakt</a>
+										 <a href="Gesundheitsquiz.html"class="punkte">Gesundheitsquiz</a>
+										 <a href="Impressum.html"class="punkte">Impressum</a>
+								 </div>
 						</div>
-	  </header>
+					</section>
 
-		<section id="weiterenummern">
-			<div id="ausnr">
-				<ul>
-					<li>Polizei<span>110</span></li>
-					<li>Feuerwehr<span>112</span></li>
-					<li>Rettungsdienst<span>112</span></li>
-					<li>Giftnotruf<span>0761-1920</span></li>
-					<li>BWK<span>0731-1400140</span></li>
-				</ul>
-				<button id="schließen" onclick="aus()">Schließen</button>
-			</div>
-		</section>
-
-	  <section id="header-nav">
-		 <div class="flexbox" >
-				 <div class="flexelement">
-				  	<a href="index.html"class="punkte">Startseite</a>
-						<a href="Leistungen.html" class="punkte">Leistungen</a>
-				   	<a href="Termin.html"class="punkte  active">Termin Vereinbarung</a>
-						<a href="Über_Uns.html"class="punkte">Über uns</a>
-						<a href="Kontakt.html"class="punkte">Kontakt</a>
-						<a href="Impressum.html"class="punkte">Impressum</a>
-				 </div>
-		</div>
-	</section>
-
+					<section id="header-navKlein">
+						<div class="flexbox" >
+								<div class="flexelement">
+									<a href="index.html"class="punkte">Startseite</a>
+									<a href="Termin.html"class="punkte   active">Terminvereinbarung</a>
+									<a href="Leistungen.html" class="punkte">Leistungen</a>
+								</div>
+								<div class="flexelement">
+									<a href="Kontakt.html"class="punkte">Kontakt</a>
+										<a href="Gesundheitsquiz.html"class="punkte">Gesundheitsquiz</a>
+										<a href="Impressum.html"class="punkte">Impressum</a>
+								</div>
+					 </div>
+				 </section>
+				 <section id="header-navMobil">
+					 <div class="flexbox" >
+							 <div class="flexelement">
+									 <a href="index.html"class="punkteMobil "><span>Startseite</span></a>
+									 <a href="Termin.html"class="punkteMobil activeMobil"><span>Terminvereinbarung</span></a>
+									 <a href="Leistungen.html" class="punkteMobil"><span>Leistungen</span></a>
+								   <a href="Kontakt.html"class="punkteMobil"><span>Kontakt</span></a>
+									 <a href="Gesundheitsquiz.html"class="punkteMobil"><span>Gesundheitsquiz</span></a>
+									 <a href="Impressum.html"class="punkteMobil"><span>Impressum</span></a>
+							 </div>
+					</div>
+				</section>
+				
 	<section id="terminImpfung">
 		<div class="cont">
 		<h1>Terminvereinbarung für eine Corona-Impfung</h1>
-		</div>
-			<form id="formular_impfung"  method="post">
+    </div>
+		<div class="flexcont">
+			<div class="flexbox">
+				<!-- <div class="meldung" id="fehlermeldung">Die folgende Felder wurden nicht korrekt ausgefüllt: <div id="fehler"></div></div> -->
+			</div>
 				<div class="flexbox">
+				<form id="formular_impfung"  method="post">
 					<div class="flexelement">
 						<p>Personendaten</p>
 						<label for="anrede" class="screenreader">Anrede:</label>
@@ -68,20 +95,20 @@
 					</div>
 					<div class="flexelement">
 						<label for="vorname" class="screenreader">Vorname:</label>
-						<input type="text" name="vorname" id="vorname" placeholder="Vorname" pattern="[a-zA-Z]{2,15}">
+						<input type="text" name="vorname" id="vorname" placeholder="Vorname" pattern="[a-zA-ZÄÖÜäöüß]{2,15}">
 						<label for="nachname" class="screenreader" >Nachname:</label>
-						<input type="text" name="nachname" id="nachname"placeholder="Nachname" pattern="[a-zA-Z]{2,15}">
+						<input type="text" name="nachname" id="nachname"placeholder="Nachname" pattern="[a-zA-ZÄÖÜäöüß]{2,15}">
 					</div>
 					<div class="flexelement">
 						<p>Adresse</p>
 						<label for="stadt" class="screenreader" >Stadt:</label>
-						<input type="text" name="stadt" id="stadt"placeholder="Stadt" pattern="[a-zA-Z]{2,20}">
+						<input type="text" name="stadt" id="stadt"placeholder="Stadt" pattern="[a-zA-ZÄÖÜäöüß]{2,20}">
 						<label for="postleitzahl" class="screenreader" >postleitzahl:</label>
 						<input type="text" name="postleitzahl" id="postleitzahl"placeholder="Postleitzahl" pattern="[0-9]{5}">
 					</div>
 					<div class="flexelement">
 						<label for="straße" class="screenreader" >Straße:</label>
-						<input type="text" name="straße" id="straße" placeholder="Straße" pattern="[a-zA-Z]{2,20}">
+						<input type="text" name="straße" id="straße" placeholder="Straße" pattern="[a-zA-ZÄÖÜäöüß]{2,20}">
 					  <label for="hausnummer" class="screenreader" >Hausnummer:</label>
 						<input type="text" name="hausnummer" id="hausnummer" placeholder="Hausnummer" pattern="[0-9]{0,3}">
 					</div>
@@ -100,7 +127,7 @@
 					</div>
 					<div class="flexelement">
 						<label for="krankenkasse" class="screenreader" >Krankenkasse:</label>
-						<input type="text" name="krankenkasse" id="krankenkasse" placeholder="Krankenkasse" list="kasse"  >
+						<input type="text" name="krankenkasse" id="krankenkasse" placeholder="Krankenkasse" list="kasse">
 						<datalist id="kasse">
 							<option value="AOK Baden-Württenberg">
 							<option value="Techniker Krankenkasse">
@@ -118,11 +145,9 @@
 							<input type="radio" id="moderna"  name="Impfstoff"value="Moderna">
 							<label for="johnson">Johnson:</label>
 							<input type="radio" id="johnson"  name="Impfstoff"value="Johnson&Johnson">
-							<label for="astra"  >AstraZeneca:</label>
-							<input type="radio" id="astra"  name="Impfstoff" value="AstraZeneca">
 						</fieldset>
 					</div>
-					<p>Bitte wählen Sie drei Termine aus die Ihnen passen. <br>Wir geben Ihnen schnellstmöglich eine Terminbestätgung mit der passenden Termin </p>
+					<p>Bitte wählen Sie drei Termine aus, die Ihnen passen. <br>Wir geben Ihnen schnellstmöglich eine Terminbestätgung mit dem passenden Termin. </p>
 					<div class="flexelement">
 						<p>Terminvorschlag 1.</p>
 						<label for="tagvorschlag_1" class="screenreader" >Tagvorschlag_1:</label>
@@ -152,20 +177,23 @@
 					<div class="flexelement">
 						<button type="submit" id="absendenButton"name="absendenbutton">Senden</button>
 					</div>
+			</form></div>
+			<div class="flexbox">
+
+				<!-- <div class="meldung" id="terminmeldung">Guten Tag xxxxx, <br> vielen Dank das Sie interesse an meiner Website haben. Natürlich können Sie keinen Termin für eine Impfung machen.</div> -->
+
 				</div>
-			</form>
+      </div>
+		</div>
+
 	</section>
 
 
+			<footer id="footer3">
+				<div class="flexbox" >
 
+			</footer>
 
-	<footer>
-		<div class="flexbox" >
-				<div class="flexelement" id="logoF">
-					<img src="src/img/logo2.1.png" alt="Logo">
-				</div>
-			</div>
-	</footer>
 
 
 	<script src="./src/js/FormularImpfung.js"defer></script>

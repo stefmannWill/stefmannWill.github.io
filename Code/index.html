@@ -15,20 +15,6 @@
 			    background-size:cover;}
 		</style> -->
 <body  >
-	<!-- Fenster mit weiteren Nummern -->
-	<div id="weiterenummern">
-		<div id="ausnr">
-			<ul>
-				<li>Polizei<span>110</span></li>
-				<li>Feuerwehr<span>112</span></li>
-				<li>Rettungsdienst<span>112</span></li>
-				<li>Giftnotruf<span>0761-1920</span></li>
-				<li>BWK<span>0731-1400140</span></li>
-			</ul>
-			<button id="schließen" onclick="aus()">Schließen</button>
-		</div>
-	</div>
-
   <header id="header">
       <div class="flexbox" >
           <div class="flexelement" id="logo">
@@ -37,17 +23,19 @@
 						</a>
           </div>
 					<div class="flexelement" onclick="nr()" id="notfallnr">
-
-
-
 							<span >Notfallnummern</span>
-
+							<div id="wichtigenr">
+								<ul>
+									<li>Polizei<span>110</span></li>
+									<li>Feuerwehr<span>112</span></li>
+									<li>Rettungsdienst<span>112</span></li>
+									<li>Giftnotruf<span>0761-1920</span></li>
+									<li>BWK<span>0731-1400140</span></li>
+								</ul>
+							</div>
 					</div >
 				</div>
   </header>
-
-
-
 <!-- Navigation -->
 
 		 <section id="header-nav">
@@ -94,8 +82,8 @@
 
 		<section class="mobilInfo">
 			<h1>Öffnungzeiten</h1>
-			<p>Montag-Freitag	<br> 07:30 Uhr - 12:00 Uhr</p>
-			<p>Montag, Dientag, Donnerstag und Freitag <br>15:00 Uhr - 18:00 Uhr</p>
+			<p>Montag - Freitag	<br>07:30 Uhr - 12:00 Uhr</p>
+			<p>Montag - Freitag <br>15:00 Uhr - 18:00 Uhr</p>
 		</section>
 
 		<section id="sprechstunde">
@@ -114,7 +102,7 @@
 							<ul>
 								<li>Montag <span>07:30 Uhr-12:00 Uhr <br>15:00 Uhr-18:00 Uhr</span></li>
 								<li>Dienstag<span>07:30 Uhr-12:00 Uhr<br>15:00 Uhr-18:00 Uhr</span></li>
-								<li>Mittwoch<span>07:30 Uhr-12:00 Uhr</span></li>
+								<li>Mittwoch<span>07:30 Uhr-12:00 Uhr<br>15:00 Uhr-18:00 Uhr</span></li>
 								<li>Donnerstag<span>07:30 Uhr-12:00 Uhr<br>15:00 Uhr-18:00 Uhr</span></li>
 								<li>Freitag<span>07:30 Uhr-12:00 Uhr<br>15:00 Uhr-18:00 Uhr</span></li>
 							</ul>
@@ -162,10 +150,11 @@
 					</div>
 				</div>
 		</footer>
+
 		<script src="./src/js/Bildwechselalt.js"defer></script>
 		<!-- <script src="./src/js/classes/Bildwechsel.js"defer></script> -->
-		<script src="./src/js/classes/Wichtigenr.js"defer></script>
-		<script src="./src/js/main.js" defer ></script>
+		<!-- <script src="./src/js/classes/WichtigeNr.js"defer></script>
+		<script src="./src/js/main.js" defer ></script> -->
 
 	</body>
 
